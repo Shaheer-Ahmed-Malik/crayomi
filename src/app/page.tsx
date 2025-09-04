@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import ButtonSm from './components/ui/button-sm';
 import Banner from './components/ui/Banner';
 import ProductCard from './components/product/product-card';
 
