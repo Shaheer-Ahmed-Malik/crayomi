@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Banner from './components/ui/Banner';
 import ProductCard from './components/product/product-card';
-import ButtonSm from './components/ui/button-sm';
 
 const categories = [
   {
@@ -29,8 +28,8 @@ const categories = [
   {
     title: "Educational Toys",
     items: 5,
-    image: "/categories/Educationaltoys.jpg",
-    link: "/products/educational-toys",
+    image: "/categories/educationaltoy.jpg",
+    link: "/products/educationaltoy",
   },
 ];
 
