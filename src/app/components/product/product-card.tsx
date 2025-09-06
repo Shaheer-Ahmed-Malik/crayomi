@@ -27,7 +27,7 @@ export default function ProductCard() {
         {/* Price + Icon Button */}
         <div className="mt-2 sm:mt-3 flex items-center justify-between">
           <span className="text-sm sm:text-base md:text-lg font-bold text-purple-600">
-            $25
+            Rs 750
           </span>
           <button className="p-1.5 sm:p-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">
             <FiShoppingCart size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />

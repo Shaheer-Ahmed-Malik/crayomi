@@ -1,8 +1,38 @@
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Banner from './components/ui/Banner';
 import ProductCard from './components/product/product-card';
+import ButtonSm from './components/ui/button-sm';
+
+const categories = [
+  {
+    title: "Clothes",
+    items: 5,
+    image: "/categories/clothes.jpg",
+    link: "/products/clothes",
+  },
+  {
+    title: "Toys",
+    items: 5,
+    image: "/categories/toys.jpg",
+    link: "/products/toys",
+  },
+  {
+    title: "Craft",
+    items: 5,
+    image: "/categories/craft.jpg",
+    link: "/products/craft",
+  },
+  {
+    title: "Educational Toys",
+    items: 5,
+    image: "/categories/Educationaltoys.jpg",
+    link: "/products/educational-toys",
+  },
+];
 
 export default function Home() {
   return (
@@ -21,70 +51,30 @@ export default function Home() {
           </p>
 
         </div>
-        <div className="grid grid-cols-4 justify-between items-center text-white">
-                {/* 1 */}
-                <div className="relative h-72 w-72 group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                  <Link href="#">
-                    <Image
-                      src="/categories/clothes.jpg"
-                      alt="Category Image"
-                      fill
-                      className="object-cover group-hover:brightness-110 transition duration-300"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition">
-                      <h2 className="text-2xl font-bold">Cloths</h2>
-                      <p className="text-lg">5 items</p>
-                    </div>
-                  </Link>
-                </div>
-                {/* 2 */}
-                <div className="relative h-72 w-72 group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                  <Link href="#">
-                    <Image
-                      src="/categories/toys.jpg"
-                      alt="Category Image"
-                      fill
-                      className="object-cover group-hover:brightness-110 transition duration-300"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition">
-                      <h2 className="text-2xl font-bold">Toys</h2>
-                      <p className="text-lg">5 items</p>
-                    </div>
-                  </Link>
-                </div>              
-                {/* 3 */}
-                <div className="relative h-72 w-72 group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                  <Link href="#">
-                    <Image
-                      src="/categories/craft.jpg"
-                      alt="Category Image"
-                      fill
-                      className="object-cover group-hover:brightness-110 transition duration-300"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition">
-                      <h2 className="text-2xl font-bold">Craft</h2>
-                      <p className="text-lg">5 items</p>
-                    </div>
-                  </Link>
-                </div>
-                {/* 4 */}
-                <div className="relative h-72 w-72 group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                  <Link href="#">
-                    <Image
-                      src="/categories/Educationaltoys.jpg"
-                      alt="Category Image"
-                      fill
-                      className="object-cover group-hover:brightness-110 transition duration-300"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition">
-                      <h2 className="text-2xl font-bold">Educational Toys</h2>
-                      <p className="text-lg">5 items</p>
-                    </div>
-                  </Link>
-                </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-white justify-items-center">
+      {categories.map((cat, index) => (
+        <div
+          key={index}
+          className="relative h-40 w-40 sm:h-52 sm:w-52 md:h-72 md:w-72 group rounded-xl overflow-hidden shadow-md hover:shadow-xl transition"
+        >
+          <Link href={cat.link}>
+            {/* Image */}
+            <Image
+              src={cat.image}
+              alt={cat.title}
+              fill
+              className="object-cover group-hover:brightness-110 transition duration-300"
+            />
 
+            {/* Overlay */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition">
+              <h2 className="text-sm sm:text-lg md:text-2xl font-bold">{cat.title}</h2>
+              <p className="text-xs sm:text-sm md:text-lg">{cat.items} items</p>
+            </div>
+          </Link>
         </div>
-        
+      ))}
+    </div>       
       </div> 
       {/* featured products */}
       <div  className='py-10 px-10 space-y-20 bg-gray-100'>
@@ -113,6 +103,9 @@ export default function Home() {
         </div>
 
       </div> 
+      <ButtonSm className="mx-auto mb-10">
+        View All Products
+      </ButtonSm>
     </div>
   );
 }

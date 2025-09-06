@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <div className='text-white'>
-      <div className='bg-black p-4 md:py-20 px-10'>
+      <div className='bg-black  py-2 px-4 md:py-4 md:px-10'>
 
         {/* image */}
         <div>
