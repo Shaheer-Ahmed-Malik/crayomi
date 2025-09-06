@@ -103,9 +103,6 @@ export default function Home() {
         </div>
 
       </div> 
-      <ButtonSm className="mx-auto mb-10">
-        View All Products
-      </ButtonSm>
     </div>
   );
 }
