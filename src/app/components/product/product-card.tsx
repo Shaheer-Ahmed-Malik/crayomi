@@ -10,7 +10,7 @@ type Product = {
 };
 
 interface ProductCardProps {
-  product?: Product; // optional banaya
+  product?: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
@@ -22,7 +22,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="w-full bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative group">
       {/* Image Section */}
-      <div className="relative aspect-square overflow-hidden">
+      <div className="relative w-full aspect-square overflow-hidden">
         <Image
           src={image}
           alt={name}

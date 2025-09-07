@@ -144,29 +144,30 @@ import React, { useState } from "react";
 import ProductCard from "../../components/product/product-card";
 import ButtonSm from "../../components/ui/button-sm";
 import { FaArrowUp } from "react-icons/fa";
+import Image from "next/image";
 
 // Dummy products (20+ for testing pagination)
 const products = [
-  { id: 1, name: "Baby Stroller", price: "$120", image: "/products/stroller.jpg" },
-  { id: 2, name: "Kids Toy Car", price: "$45", image: "/products/toy-car.jpg" },
-  { id: 3, name: "Soft Teddy Bear", price: "$25", image: "/products/teddy.jpg" },
-  { id: 4, name: "Baby Shoes", price: "$30", image: "/products/shoes.jpg" },
-  { id: 5, name: "Kids Jacket", price: "$55", image: "/products/jacket.jpg" },
-  { id: 6, name: "Baby Cot", price: "$200", image: "/products/cot.jpg" },
-  { id: 7, name: "Toy Train", price: "$40", image: "/products/train.jpg" },
-  { id: 8, name: "Baby Bottle", price: "$15", image: "/products/bottle.jpg" },
-  { id: 9, name: "Toy Robot", price: "$60", image: "/products/robot.jpg" },
-  { id: 10, name: "Baby Blanket", price: "$35", image: "/products/blanket.jpg" },
-  { id: 11, name: "Toy Blocks", price: "$20", image: "/products/blocks.jpg" },
-  { id: 12, name: "Baby Swing", price: "$150", image: "/products/swing.jpg" },
-  { id: 13, name: "Toy Drone", price: "$80", image: "/products/drone.jpg" },
-  { id: 14, name: "Kids Backpack", price: "$25", image: "/products/backpack.jpg" },
-  { id: 15, name: "Baby Socks", price: "$10", image: "/products/socks.jpg" },
-  { id: 16, name: "Toy Puzzle", price: "$18", image: "/products/puzzle.jpg" },
-  { id: 17, name: "Kids Cap", price: "$12", image: "/products/cap.jpg" },
-  { id: 18, name: "Baby Chair", price: "$90", image: "/products/chair.jpg" },
-  { id: 19, name: "Toy Bike", price: "$70", image: "/products/bike.jpg" },
-  { id: 20, name: "Baby Crib", price: "$250", image: "/products/crib.jpg" },
+  { id: 1, name: "Baby Stroller", price: "rs 20120", image: "/product-images/1.jpeg" },
+  { id: 2, name: "Kids Toy Car", price: "rs 2045", image: "/product-images/1.jpeg" },
+  { id: 3, name: "Soft Teddy Bear", price: "rs 2025", image: "/product-images/1.jpeg" },
+  { id: 4, name: "Baby Shoes", price: "rs 2030", image: "/product-images/1.jpeg" },
+  { id: 5, name: "Kids Jacket", price: "rs 2055", image: "/product-images/1.jpeg" },
+  { id: 6, name: "Baby Cot", price: "rs 20200", image: "/product-images/1.jpeg" },
+  { id: 7, name: "Toy Train", price: "rs 2040", image: "/product-images/1.jpeg" },
+  { id: 8, name: "Baby Bottle", price: "rs 2015", image: "/product-images/1.jpeg" },
+  { id: 9, name: "Toy Robot", price: "rs 2060", image: "/product-images/1.jpeg" },
+  { id: 10, name: "Baby Blanket", price: "rs 2035", image: "/product-images/1.jpeg" },
+  { id: 11, name: "Toy Blocks", price: "rs 2020", image: "/product-images/1.jpeg" },
+  { id: 12, name: "Baby Swing", price: "rs 20150", image: "/product-images/1.jpeg" },
+  { id: 13, name: "Toy Drone", price: "rs 2080", image: "/product-images/1.jpeg" },
+  { id: 14, name: "Kids Backpack", price: "rs 2025", image: "/product-images/1.jpeg" },
+  { id: 15, name: "Baby Socks", price: "rs 2010", image: "/product-images/1.jpeg" },
+  { id: 16, name: "Toy Puzzle", price: "rs 2018", image: "/product-images/1.jpeg" },
+  { id: 17, name: "Kids Cap", price: "rs 2012", image: "/product-images/1.jpeg" },
+  { id: 18, name: "Baby Chair", price: "rs 2090", image: "/product-images/1.jpeg" },
+  { id: 19, name: "Toy Bike", price: "rs 2070", image: "/product-images/1.jpeg" },
+  { id: 20, name: "Baby Crib", price: "rs 20250", image: "/product-images/1.jpeg" },
 ];
 
 export default function ProductsPage() {
@@ -203,9 +204,9 @@ export default function ProductsPage() {
           <div>
             <h3 className="font-semibold mb-2">Price</h3>
             <div className="flex flex-col space-y-2 text-sm text-gray-600">
-              <label><input type="checkbox" className="mr-2" /> Under $50</label>
-              <label><input type="checkbox" className="mr-2" /> $50 - $100</label>
-              <label><input type="checkbox" className="mr-2" /> Above $100</label>
+              <label><input type="checkbox" className="mr-2" /> Under rs 2050</label>
+              <label><input type="checkbox" className="mr-2" /> rs 2050 - rs 20100</label>
+              <label><input type="checkbox" className="mr-2" /> Above rs 20100</label>
             </div>
           </div>
         </div>
