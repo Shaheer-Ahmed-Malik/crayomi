@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Footer = () => {
   return (
     <div className='text-white'>
-      <div className='bg-black  py-2 px-4 md:py-4 md:px-10'>
+      <div className='bg-gray-900 pt-8 px-4 md:py-4 md:px-10'>
 
         {/* image */}
         <div>
@@ -56,6 +56,16 @@ const Footer = () => {
           </div>
 
         </div>
+        </div>
+          {/* Horizontal Line */}
+        <div className="text-center text-white font-thin mt-10">
+          <hr className="border-t border-gray-300" />
+
+          {/* Text */}
+          <div className="text-center p-6 text- ">
+            Made with ❤️ by <span className="font-semibold">Crayomi   </span>
+            © {new Date().getFullYear()} All rights reserved.
+          </div>
         </div>
         
       </div>

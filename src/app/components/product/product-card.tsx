@@ -2,35 +2,46 @@
 import Image from "next/image";
 import { FiShoppingCart } from "react-icons/fi";
 
-export default function ProductCard() {
+type Product = {
+  id?: number;
+  name?: string;
+  price?: string;
+  image?: string;
+};
+
+interface ProductCardProps {
+  product?: Product; // optional banaya
+}
+
+export default function ProductCard({ product }: ProductCardProps) {
+  // Default (hardcoded) values + override if props exist
+  const name = product?.name || "Kids Stylish Shirt";
+  const price = product?.price || "Rs 750";
+  const image = product?.image || "/product-images/1.jpeg";
+
   return (
-    <div className="w-36 sm:w-44 md:w-56 bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative group">
+    <div className="w-full bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative group">
       {/* Image Section */}
-      <div className="relative w-full h-28 sm:h-36 md:h-44">
+      <div className="relative aspect-square overflow-hidden">
         <Image
-          src="/product-images/1.jpeg" // apni image ka path (public folder)
-          alt="Product"
+          src={image}
+          alt={name}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
 
       {/* Content Section */}
-      <div className="p-2 sm:p-3">
-        <h2 className="text-xs sm:text-sm md:text-base font-semibold text-gray-800 truncate">
-          Kids Stylish Shirt
-        </h2>
-        <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 mt-1 truncate">
-          Soft and comfy cotton shirt
+      <div className="p-3">
+        <h2 className="text-sm font-semibold text-gray-800 truncate">{name}</h2>
+        <p className="text-xs text-gray-500 mt-1 truncate">
+          Stylish and comfy for kids
         </p>
 
-        {/* Price + Icon Button */}
-        <div className="mt-2 sm:mt-3 flex items-center justify-between">
-          <span className="text-sm sm:text-base md:text-lg font-bold text-purple-600">
-            Rs 750
-          </span>
-          <button className="p-1.5 sm:p-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">
-            <FiShoppingCart size={14} className="sm:w-4 sm:h-4 md:w-5 md:h-5" />
+        <div className="mt-3 flex items-center justify-between">
+          <span className="text-base font-bold text-purple-600">{price}</span>
+          <button className="p-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition">
+            <FiShoppingCart size={18} />
           </button>
         </div>
       </div>

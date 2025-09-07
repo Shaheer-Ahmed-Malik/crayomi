@@ -23,41 +23,37 @@ const Header = () => {
 
           {/* Desktop nav */}
         <div className="hidden md:block">
-  <ul className="flex space-x-8">
-    <li>
-      <Link
-        href="/"
-        className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
-      >
-        Home
-      </Link>
-    </li>
-    <li>
-      <Link
-        href="/about"
-        className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
-      >
-        About
-      </Link>
-    </li>
-    <li>
-      <Link
-        href="/contact"
-        className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
-      >
-        Contact
-      </Link>
-    </li>
-    <li>
-      <Link
-        href="/products"
-        className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
-      >
-        Products
-      </Link>
-    </li>
-  </ul>
-</div>
+          <ul className="flex space-x-8">
+            <li>
+              <Link
+                href="/"
+                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/about"
+                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/products"
+                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
+                Products
+              </Link>
+            </li>
+          </ul>
+        </div>
 
 
         </div>
@@ -72,7 +68,7 @@ const Header = () => {
         {/* search + cart + auth (desktop only) */}
       <div className="hidden md:flex items-center space-x-8">
         {/* search */}
-        <div className="flex rounded-full border border-gray-600 p-2 items-center">
+        <div className="flex rounded-full border transition duration-300 border-gray-600 hover:border-primary-gradient p-2 items-center">
           <input
             className="outline-none w-40"
             type="text"
@@ -82,9 +78,8 @@ const Header = () => {
         </div>
 
         {/* cart */}
-        <FiShoppingCart className="text-2xl cursor-pointer" />
+        <FiShoppingCart className="text-2xl cursor-pointer transition duration-300 hover:scale-105 hover:text-gray-600" />
 
-        {/* auth/profile */}
         {/* auth/profile */}
         {false ? (
           <Image
@@ -97,12 +92,12 @@ const Header = () => {
         ) : (
           <div className="flex items-center gap-3">
             <Link href="/login">
-              <ButtonSm className="bg-transparent border border-gray-400 text-gray-700 hover:bg-gray-100">
+              <ButtonSm className="bg-transparent border border-gray-400 hover:bg-gray-100">
                 Login
               </ButtonSm>
             </Link>
             <Link href="/signup">
-              <ButtonSm>
+              <ButtonSm className="text-white">
                 Sign Up
               </ButtonSm>
             </Link>
@@ -177,7 +172,7 @@ const Header = () => {
 
             {/* Sign Up */}
             <Link href="/signup" onClick={() => setIsOpen(false)}>
-              <ButtonSm className="w-full">
+              <ButtonSm className="text-white w-full">
                 Sign Up
               </ButtonSm>
             </Link>

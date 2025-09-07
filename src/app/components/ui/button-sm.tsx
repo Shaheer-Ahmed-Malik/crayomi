@@ -17,7 +17,7 @@ const ButtonSm: React.FC<ButtonSmProps> = ({
     <button
       type={type}
       onClick={onClick}
-      className={`px-6 py-2 rounded-full bg-blue-600 text-white text-base hover:bg-blue-700 transition ${className}`}
+className={`px-6 py-2 rounded-full bg-blue-600 text-base hover:bg-blue-700 transition ${className}`}
     >
       {children}
     </button>
