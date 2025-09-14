@@ -91,12 +91,12 @@ const Header = () => {
           />
         ) : (
           <div className="flex items-center gap-3">
-            <Link href="/login">
+            <Link href="/auth/login">
               <ButtonSm className="bg-transparent border border-gray-400 hover:bg-gray-100">
                 Login
               </ButtonSm>
             </Link>
-            <Link href="/signup">
+            <Link href="/auth/signup">
               <ButtonSm className="text-white">
                 Sign Up
               </ButtonSm>
@@ -164,14 +164,14 @@ const Header = () => {
         <div className="p-6 border-t border-gray-200">
           <div className="flex flex-col gap-4">
             {/* Login */}
-            <Link href="/login" onClick={() => setIsOpen(false)}>
+            <Link href="/auth/login" onClick={() => setIsOpen(false)}>
               <ButtonSm className="w-full bg-transparent border border-gray-400 text-gray-700 hover:bg-gray-100">
                 Login
               </ButtonSm>
             </Link>
 
             {/* Sign Up */}
-            <Link href="/signup" onClick={() => setIsOpen(false)}>
+            <Link href="/auth/signup" onClick={() => setIsOpen(false)}>
               <ButtonSm className="text-white w-full">
                 Sign Up
               </ButtonSm>
