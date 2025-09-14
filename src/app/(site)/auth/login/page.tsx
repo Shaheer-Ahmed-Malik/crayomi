@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 
-export default function login() {
+export default function Login() {
    const [showPassword, setShowPassword] = useState(false);
 
   
