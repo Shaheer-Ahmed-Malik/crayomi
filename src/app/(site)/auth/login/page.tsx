@@ -19,7 +19,7 @@ export default function login() {
             />
             <div className="text-center">or</div>
 
-              <button className="flex items-center justify-center gap-4 px-6 py-2 w-80 rounded-full bg-black hover:bg-white text-white hover:text-black hover:border transition duration-300 w-64 h-12">
+              <button className="flex items-center justify-center gap-4 px-6 py-2 w-[320px] rounded-full bg-black hover:bg-white text-white hover:text-black hover:border transition duration-300 w-64 h-12">
                 <FcGoogle size={20} />
                 <span>Login with Google</span>
               </button>
