@@ -22,90 +22,92 @@ const Header = () => {
           </Link>
 
           {/* Desktop nav */}
-        <div className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li>
-              <Link
-                href="/"
-                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/products"
-                className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent">
-                Products
-              </Link>
-            </li>
-          </ul>
+          <div className="hidden md:block">
+            <ul className="flex space-x-8">
+              <li>
+                <Link
+                  href="/"
+                  className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/products"
+                  className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
+                >
+                  Products
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
+        {/* Hamburger + Cart (mobile only) */}
+        <div className="md:hidden flex items-center gap-6 pr-3">
+          {/* cart */}
+          <FiShoppingCart className="text-3xl cursor-pointer text-gray-700" />
 
-        </div>
-
-        {/* Hamburger (mobile only) */}
-        <div className="md:hidden">
+          {/* hamburger */}
           <button onClick={() => setIsOpen(true)}>
             <RxHamburgerMenu className="text-3xl" />
           </button>
         </div>
 
         {/* search + cart + auth (desktop only) */}
-      <div className="hidden md:flex items-center space-x-8">
-        {/* search */}
-        <div className="flex rounded-full border transition duration-300 border-gray-600 hover:border-primary-gradient p-2 items-center">
-          <input
-            className="outline-none w-40"
-            type="text"
-            placeholder="Search..."
-          />
-          <CiSearch />
-        </div>
-
-        {/* cart */}
-        <FiShoppingCart className="text-2xl cursor-pointer transition duration-300 hover:scale-105 hover:text-gray-600" />
-
-        {/* auth/profile */}
-        {false ? (
-          <Image
-            src="/profile/user.jpg"
-            alt="User"
-            width={36}
-            height={36}
-            className="rounded-full cursor-pointer"
-          />
-        ) : (
-          <div className="flex items-center gap-3">
-            <Link href="/auth/login">
-              <ButtonSm className="bg-transparent border border-gray-400 hover:bg-gray-100">
-                Login
-              </ButtonSm>
-            </Link>
-            <Link href="/auth/signup">
-              <ButtonSm className="text-white">
-                Sign Up
-              </ButtonSm>
-            </Link>
+        <div className="hidden md:flex items-center space-x-8">
+          {/* search */}
+          <div className="flex rounded-full border transition duration-300 border-gray-600 hover:border-primary-gradient p-2 items-center">
+            <input
+              className="outline-none w-40"
+              type="text"
+              placeholder="Search..."
+            />
+            <CiSearch />
           </div>
-        )}
 
-      </div>
+          {/* cart */}
+          <FiShoppingCart className="text-2xl cursor-pointer transition duration-300 hover:scale-105 hover:text-gray-600" />
 
+          {/* auth/profile */}
+          {false ? (
+            <Image
+              src="/profile/user.jpg"
+              alt="User"
+              width={36}
+              height={36}
+              className="rounded-full cursor-pointer"
+            />
+          ) : (
+            <div className="flex items-center gap-3">
+              <Link href="/auth/login">
+                <ButtonSm className="bg-transparent border border-gray-400 hover:bg-gray-100">
+                  Login
+                </ButtonSm>
+              </Link>
+              <Link href="/auth/signup">
+                <ButtonSm className="text-white">Sign Up</ButtonSm>
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Overlay */}
@@ -130,7 +132,7 @@ const Header = () => {
             </button>
           </div>
 
-          {/* search + cart (mobile) */}
+          {/* search (mobile) */}
           <div className="px-6 mb-6 flex items-center space-x-4">
             <div className="flex flex-1 rounded-full border border-gray-400 p-2 items-center">
               <input
@@ -140,7 +142,6 @@ const Header = () => {
               />
               <CiSearch className="text-lg" />
             </div>
-            <FiShoppingCart className="text-2xl text-gray-700" />
           </div>
 
           {/* nav links */}
@@ -172,14 +173,10 @@ const Header = () => {
 
             {/* Sign Up */}
             <Link href="/auth/signup" onClick={() => setIsOpen(false)}>
-              <ButtonSm className="text-white w-full">
-                Sign Up
-              </ButtonSm>
+              <ButtonSm className="text-white w-full">Sign Up</ButtonSm>
             </Link>
           </div>
         </div>
-
-
       </div>
     </div>
   );
