@@ -10,7 +10,7 @@ export const metadata = {
   title: "Crayomii",
   description: "Best kids store",
   icons: {
-    icon: "/favicon.png", // favicon ki jagah logo.png use hoga
+    icon: "/faviconn.png", // favicon ki jagah logo.png use hoga
   },
 };
 
