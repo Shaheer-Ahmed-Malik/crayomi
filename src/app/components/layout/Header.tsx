@@ -42,7 +42,7 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="transition duration-300 hover:bg-primary-gradient hover:bg-clip-text hover:text-transparent"
                 >
                   Contact
@@ -102,7 +102,7 @@ const Header = () => {
                   Login
                 </ButtonSm>
               </Link>
-              <Link href="/auth/signup">
+              <Link href="/auth/sign-up">
                 <ButtonSm className="text-white">Sign Up</ButtonSm>
               </Link>
             </div>
@@ -152,7 +152,7 @@ const Header = () => {
             <Link href="/about" onClick={() => setIsOpen(false)}>
               About
             </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
+            <Link href="/contact-us" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
             <Link href="/products" onClick={() => setIsOpen(false)}>
@@ -172,7 +172,7 @@ const Header = () => {
             </Link>
 
             {/* Sign Up */}
-            <Link href="/auth/signup" onClick={() => setIsOpen(false)}>
+            <Link href="/auth/sign-up" onClick={() => setIsOpen(false)}>
               <ButtonSm className="text-white w-full">Sign Up</ButtonSm>
             </Link>
           </div>
